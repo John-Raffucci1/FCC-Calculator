@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import react from "react";
+import { Calculator } from "./Components/Calculator";
+import styled from "styled-components";
+
+const AppDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccd4e3;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppDiv id="display" className="App">
+      <Calculator />
+    </AppDiv>
   );
 }
 
